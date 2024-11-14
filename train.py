@@ -20,7 +20,7 @@ def main(
     ):
 
     img_transform = transforms.Compose([
-        transforms.Resize((img_dim, img_dim)),
+        #transforms.Resize((img_dim, img_dim)),
         transforms.ToTensor()
     ])
 

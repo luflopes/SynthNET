@@ -5,10 +5,11 @@ import rawpy
 
 
 class Synthbuster(Dataset):
-    def __init__(self, metadata_file, transform=None, stratify=False):
+    def __init__(self, metadata_file, transform=None, stratify=False, img_size:tuple=(224, 224)):
         self.medadata = pd.read_csv(metadata_file)
         self.transform = transform
         self.stratify = stratify
+        self.img_size = img_size
 
     def __len__(self):
         return self.medadata.shape[0]
@@ -23,9 +24,9 @@ class Synthbuster(Dataset):
         if self.medadata['extension'][idx] == 'NEF':
             with rawpy.imread(img_path) as raw:
                 rgb = raw.postprocess()
-                image = Image.fromarray(rgb).convert('RGB')
+                image = Image.fromarray(rgb).convert('RGB').resize(self.img_size)
         else:
-            image = Image.open(img_path).convert('RGB')
+            image = Image.open(img_path).convert('RGB').resize(self.img_size)
             
         if self.transform:
             image = self.transform(image)

@@ -30,7 +30,7 @@ def main(
     exp_dir = os.path.join(root_dir, out if out is not None else "exp_0")
     out_file = os.path.join(exp_dir, "metrics", "metrics.csv")
 
-    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     
     model = SynthNET(ckp=ckp, input_size=(3, img_dim, img_dim), device=device)
     model.eval()

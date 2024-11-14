@@ -38,7 +38,7 @@ class SynthNET(nn.Module):
         super(SynthNET, self).__init__()
 
         self.num_fourier_peaks = 135
-        self.device = device or torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+        self.device = device or torch.device("cuda" if torch.cuda.is_available() else "cpu")
         model = models.mobilenet_v3_small(
             input_size=input_size,
             weights=models.MobileNet_V3_Small_Weights.IMAGENET1K_V1
