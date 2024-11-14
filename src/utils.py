@@ -74,7 +74,7 @@ class EarlyStopping:
             self.best_score = score
             self.count_down = self.patience
             return True
-        elif score <= self.best_score + self.delta:
+        elif score >= self.best_score + self.delta:
             self.count_down -= 1
             if self.verbose:
                 print(f'EarlyStopping count_down: {self.count_down} on {self.patience}')
