@@ -2,7 +2,7 @@ from PIL import Image
 import pandas as pd
 from torch.utils.data import Dataset
 import rawpy
-import torch
+
 
 class Synthbuster(Dataset):
     def __init__(self, metadata_file, transform=None, stratify=False):
