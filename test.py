@@ -31,7 +31,7 @@ def main(
     out_file = os.path.join(exp_dir, "metrics", "metrics.csv")
 
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-    # Carregar o checkpoint e fazer uma predição
+    
     model = SynthNET(ckp=ckp, input_size=(3, img_dim, img_dim), device=device)
     model.eval()
     model.make_dirs(exp_dir)
