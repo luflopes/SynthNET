@@ -30,14 +30,17 @@ def main(
     exp_dir = os.path.join(root_dir, out if out is not None else "exp_0")
     out_file = os.path.join(exp_dir, "metrics", "metrics.csv")
 
+    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     # Carregar o checkpoint e fazer uma predição
-    model = SynthNET(ckp=ckp, input_size=(3, img_dim, img_dim))
+    model = SynthNET(ckp=ckp, input_size=(3, img_dim, img_dim), device=device)
     model.eval()
     model.make_dirs(exp_dir)
 
     results = []
  
     for ids, images, labels, datasets, subsets in test_dataloader:
+        images = images.to(device)
+        labels = labels.to(device)
         preds = model.predict(images)
         preds_bin = preds.cpu().numpy()
         labels_np = labels.cpu().numpy()
@@ -70,6 +73,6 @@ def parse_args():
 
 if __name__ == "__main__":
     main(**vars(parse_args()))
-    
+
     # Test model:
     # python3 test.py ./data/test.csv --ckp ./experiments/exp_1/weights/synthnet-best.pth --b_size 64 --img_dim 224 --out exp_1
