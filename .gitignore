@@ -1,0 +1,63 @@
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos de cache do Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ambiente virtual e pacotes de dependências
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+*.egg-info/
+.eggs/
+*.egg
+
+*.log
+*.sqlite3
+
+*.env
+.env.*
+*.secret
+config.json
+
+*.ipynb
+.ipynb_checkpoints/
+
+# Arquivos gerados pelo pytest e cobertura de testes
+htmlcov/
+.tox/
+.cache/
+.coverage
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# Builds
+build/
+dist/
+*.spec
+*.lock
+
+# IDEs e editores
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Outros arquivos temporários
+*.bak
+*.tmp
+*.swp
+
+*images
+
+*images.csv
+
+*experiments/
