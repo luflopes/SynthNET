@@ -144,7 +144,7 @@ class SynthNET(nn.Module):
         criterion = criterion.to(self.device)
         early_stopping = None
 
-        print()
+        print("\nTraining process has started!\n")
 
         for epoch in range(num_epochs):
             train_running_loss = 0.0
