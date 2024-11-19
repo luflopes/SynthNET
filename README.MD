@@ -50,11 +50,13 @@ pip install -r requirements.txt
 
 O conjunto de dados utilizado pode ser encontrado em https://www.kaggle.com/datasets/itamargr/dfdc-faces-of-the-train-sample.
 
-Certifique-se de que os dados estão organizados conforme as pastas especificadas:
-
-/data/train.csv
-/data/eval.csv
-/data/eval.csv
+Certifique-se de que os dados estão organizados conforme as pastas especificadas: 
+<br>
+data/
+    ├── train.csv
+    ├── eval.csv
+    ├── test.csv
+<br>
 
 Nota: faça a leitura dos diretórios e organize os caminhos em 3 arquivos `.csv` contendo uma coluna path com os caminhos para as imagens.
 
