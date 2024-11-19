@@ -45,3 +45,29 @@ Instale as dependências com o comando:
 ```bash
 pip install -r requirements.txt
 ```
+## Como Executar
+### 1. Preparar os Dados
+
+O conjunto de dados utilizado pode ser encontrado em https://www.kaggle.com/datasets/itamargr/dfdc-faces-of-the-train-sample.
+
+Certifique-se de que os dados estão organizados conforme as pastas especificadas:
+
+/data/train.csv
+/data/eval.csv
+/data/eval.csv
+
+Nota: faça a leitura dos diretórios e organize os caminhos em 3 arquivos `.csv` contendo uma coluna path com os caminhos para as imagens.
+
+### 2. Treinamento
+
+Para treinar o modelo, execute:
+
+```python
+python3 train.py ./data/train.csv ./data/eval.csv --ckp ./experiments/exp_1/weights/synthnet-best.pth --b_size 64 --img_dim 224 --epochs 2 --out exp_2
+```
+### 3. Avaliação
+
+Para avaliar o modelo treinado, use:
+```python
+python3 test.py ./data/test.csv --ckp ./experiments/exp_1/weights/synthnet-best.pth --b_size 128 --img_dim 224 --out exp_1
+```
