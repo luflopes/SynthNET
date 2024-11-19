@@ -75,4 +75,4 @@ if __name__ == "__main__":
     main(**vars(parse_args()))
 
     # Test model:
-    # python3 test.py ./data/test.csv --ckp ./experiments/exp_1/weights/synthnet-best.pth --b_size 64 --img_dim 224 --out exp_1
+    # python3 test.py ./data/test.csv --ckp ./experiments/exp_1/weights/synthnet-best.pth --b_size 128 --img_dim 224 --out exp_1
