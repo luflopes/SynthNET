@@ -12,7 +12,8 @@ A arquitetura combina duas fontes de dados:
 
 Os dados são fusionados em pontos específicos da rede para uma análise conjunta, seguidos por etapas de atenção espacial antes de prosseguir para convoluções adicionais.
 
-![Arquitetura da Rede](./assets/img/network_architecture.png)
+<h4>Arquitetura da Rede</h4>
+<img src="./assets/img/network_architecture.png" alt="Arquitetura da Rede" width="400">
 
 ---
 
