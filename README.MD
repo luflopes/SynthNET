@@ -65,7 +65,7 @@ Nota: faça a leitura dos diretórios e organize os caminhos em 3 arquivos `.csv
 Para treinar o modelo, execute:
 
 ```python
-python3 train.py ./data/train.csv ./data/eval.csv --ckp ./experiments/exp_1/weights/synthnet-best.pth --b_size 64 --img_dim 224 --epochs 2 --out exp_2
+python3 train.py ./data/train.csv ./data/eval.csv --b_size 64 --img_dim 224 --epochs 2 --out exp_1
 ```
 ### 3. Avaliação
 
