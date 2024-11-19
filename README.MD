@@ -36,8 +36,8 @@ Embora os resultados iniciais sejam promissores, foi observada uma tendência ao
 - **Bibliotecas**:
   - PyTorch
   - NumPy
+  - Pandas
   - Matplotlib
-  - OpenCV
   - scikit-learn
 
 Instale as dependências com o comando:
