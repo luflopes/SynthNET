@@ -52,10 +52,10 @@ O conjunto de dados utilizado pode ser encontrado em https://www.kaggle.com/data
 
 Certifique-se de que os dados estão organizados conforme as pastas especificadas: 
 <br>
-data/
-    ├── train.csv
-    ├── eval.csv
-    ├── test.csv
+data/<br>
+    ├── train.csv<br>
+    ├── eval.csv<br>
+    ├── test.csv<br>
 <br>
 
 Nota: faça a leitura dos diretórios e organize os caminhos em 3 arquivos `.csv` contendo uma coluna path com os caminhos para as imagens.
